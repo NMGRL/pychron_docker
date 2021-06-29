@@ -1,13 +1,8 @@
 # pychron_docker
 
-
-### Build Pychron with docker
-
-```shell
-docker build -t pychron3:latest .
-```
-
 ### Run Docker container
 ```shell
+curl -O https://raw.githubusercontent.com/NMGRL/pychron_docker/main/pychron.sh
+chmod +x ./pychron.sh
 ./pychron.sh
 ```
