@@ -18,15 +18,14 @@ RUN pip3 install uncertainties qimage2ndarray peakutils
 RUN git clone https://github.com/NMGRL/pychron
 WORKDIR pychron
 RUN git checkout dev/dr
-
+WORKDIR ..
 # copy setupfiles
 RUN mkdir /home/Pychron
-COPY ./app_utils/setupfiles /home/Pychron/setupfiles
-COPY ./app_utils/preferences /home/Pychron/preferences
-COPY ./app_utils/demo.sqlite /home/Pychron/demo.sqlite
-COPY ./app_utils/.appdata /home/Pychron/.appdata
+COPY ./setupfiles /home/Pychron/setupfiles
+COPY ./preferences /home/Pychron/preferences
+COPY ./demo.sqlite /home/Pychron/demo.sqlite
+COPY ./.appdata /home/Pychron/.appdata
 
-WORKDIR ..
 RUN mkdir /home/Pychron/data
 RUN mkdir /home/Pychron/data/.dvc
 RUN mkdir /home/Pychron/data/.dvc/repositories

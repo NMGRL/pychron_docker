@@ -4,7 +4,7 @@ docker container prune -f
 # if using mac os
 #========================================================================================
 xhost +127.0.0.1
-docker run --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --env="DISPLAY=host.docker.internal:0" pychron3
+docker run --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --env="DISPLAY=host.docker.internal:0" pychron3:latest
 #========================================================================================
 
 # if using linux comment out the above 2 lines
