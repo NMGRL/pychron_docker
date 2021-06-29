@@ -21,10 +21,10 @@ RUN git checkout dev/dr
 
 # copy setupfiles
 RUN mkdir /home/Pychron
-RUN mv app_utils/setupfiles /home/Pychron/setupfiles
-RUN mv app_utils/preferences /home/Pychron/preferences
-RUN mv app_utils/demo.sqlite /home/Pychron/demo.sqlite
-RUN mv app_utils/.appdata /home/Pychron/.appdata
+COPY ./app_utils/setupfiles /home/Pychron/setupfiles
+COPY ./app_utils/preferences /home/Pychron/preferences
+COPY ./app_utils/demo.sqlite /home/Pychron/demo.sqlite
+COPY ./app_utils/.appdata /home/Pychron/.appdata
 
 WORKDIR ..
 RUN mkdir /home/Pychron/data
