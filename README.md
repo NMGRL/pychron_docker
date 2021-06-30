@@ -13,6 +13,8 @@ This project provides a containerized version of pychron data reduction, aka pyc
 ### Install Docker
 For mac and windows Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
+For Linux [see](https://docs.docker.com/engine/install/ubuntu/)
+
 ### Install XQuartz (macOS only)
 1. Install [homebrew](https://brew.sh/)
 
@@ -28,6 +30,7 @@ brew install --cask xquartz
 ![image](https://user-images.githubusercontent.com/2035568/123883120-9272e800-d905-11eb-97a3-33bdf59cb23f.png)
 
 see https://fredrikaverpil.github.io/2016/07/31/docker-for-mac-and-gui-applications/
+
 4. Restart your computer to have changes take effect
 
 
