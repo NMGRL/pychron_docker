@@ -1,12 +1,12 @@
 #!/bin/bash
 docker container prune -f
 
-if [hostnamectl]
+if [ hostnamectl ]
 then
     # if linux
     #========================================================================================
     xhost +local:root
-    docker run -volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" ghcr.io/nmgrl/pychron:latest
+    docker run --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" ghcr.io/nmgrl/pychron:latest
 else
     #========================================================================================
     # if using mac os
